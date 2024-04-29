@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a39de41d9f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <title>Post</title>
+</head>
+<body>
+    <header class="hero blog">
+<div class="navbar top" id="navbar">
+    <h1 class="logo">
+       <span class="text-primary"> <i class="fas fa-book-open"></i> Edge</span>Leader
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="content">
+    <h1>Blog</h1>
+</div>
+    </header>
+
+
+    <main>
+
+      <section class="post">
+        <h2>Blog Post</h2>
+        <p class="meta">
+            <i class="fas fa-user"></i> Posted by <strong>Jane Mith</strong> | April 24 2024
+        </p>
+        <img src="img/case5.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facere veniam. Optio repudiandae esse error totam libero fugit molestiae illum.</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, adipisci eum quae voluptates sapiente tempore aliquid quis saepe amet? Ea blanditiis laboriosam deleniti necessitatibus! Nemo neque consequatur adipisci, veniam id officia laborum aut deleniti incidunt enim eligendi fuga natus, aspernatur, aperiam architecto quaerat! Ea facilis assumenda sed vel explicabo quaerat perspiciatis recusandae veritatis esse, et natus error, quisquam repellat reprehenderit?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo et iure deserunt, saepe ullam expedita fugit dignissimos aperiam quidem. Harum tenetur mollitia velit, possimus quia vero est quis eaque officia? Dolore delectus nostrum sit, consectetur sint illo obcaecati debitis minus provident qui dolor incidunt assumenda, tempore amet alias officiis corporis.</p>
+</section>
+                
+    </main>
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Copyright &copy; 2024 - EdgeLeader</p>
+    </footer>
+    <script>
+        const navbar = document.getElementById('navbar')
+        let scrolled = false;
+
+
+        window.onscroll = () => {
+            if(window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if(!scrolled){
+                    navbar.style.transform = 'translateY(-70px)'
+                }
+                setTimeout(()=>{
+                    navbar.style.transform = 'translateY(0)'
+                    scrolled = true;
+                }, 300)
+            } else {
+                navbar.classList.add('top')
+                scrolled = false;
+            }
+        };
+    </script>
+</body>
+</html>
