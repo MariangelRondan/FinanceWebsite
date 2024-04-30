@@ -76,6 +76,14 @@ img{
     background: transparent;
 }
 
+.nav-links {
+    display: block;
+  }
+
+.menu-btn{
+    display: none;
+}
+
 /* Header */
 
 .hero{
@@ -291,31 +299,71 @@ color: #8f974a;
 }
 
 
-/* Mobile */
-@media(max-width: 768px){
-    .navbar {
+
+
+
+
+@media(max-width: 768px) {
+    .nav-links {
+        display: none; 
+        position: absolute;
+        top: 250%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+     
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .menu.active .nav-links {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
         height: 120px;
         padding: 20px;
     }
 
-    .navbar a{
+    .navbar a {
         padding: 10px 10px;
         margin: 0 3px;
     }
 
-    .flex-items{
+    .flex-items {
         flex-direction: column;
-
     }
 
-    .flex-columns .column, .flex-grid .row .column {
+    .flex-columns .column,
+    .flex-grid .row .column {
+        margin-top: 20px;
         flex: 100%;
         max-width: 100%;
     }
-  
 
-    .team img{
-        width: 50%;
+    .menu-btn {
+        display: block;
+        position: absolute;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin-bottom: 15px;
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
